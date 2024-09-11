@@ -18,6 +18,11 @@
 @endif
     <form action="contacto-recibe" method="post">
         @csrf 
+@if ($tipo_persona =='cliente')
+<label for="no_cliente">Numero de cliente:</label><br>
+<input type="text" name="no_cliente" id="no_cliente"><br>
+@endif
+
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required><br><br>
 
